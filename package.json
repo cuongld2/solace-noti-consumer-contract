@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:pact": "CI=true react-scripts test --testTimeout=30000 pact.spec.js",
+    "test:pact": "react-scripts test --testTimeout=30000 pact.spec.js",
     "pact:publish": "pact-broker publish ./pacts --consumer-app-version=0.0.1 --auto-detect-version-properties --broker-base-url=$PACT_URL --broker-token $PACT_TOKEN"
   },
   "keywords": [],

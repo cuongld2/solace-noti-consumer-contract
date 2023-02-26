@@ -45,10 +45,11 @@ describe("Check integration between notification and blog service", () => {
             .expectsToReceive("a noti for a new blog post is created")
             .withContent({
               name: like("How to implement a blog management service using Node.js"),
-              authorId: like("4242133141"),
+              firstName: like("Donald"),
+              lastName: like("Le"),
             })
             .withMetadata({
-              topic: "services/blogService",
+              topic: "service/blog/authorId/blogId/new",
             })
             // 4 Verify consumers' ability to handle messages
             .verify(synchronousBodyHandler(blogAPIHandler))

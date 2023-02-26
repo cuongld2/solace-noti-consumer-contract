@@ -187,7 +187,7 @@ solace.SolclientFactory.init(factoryProps);
 solace.SolclientFactory.setLogLevel(solace.LogLevel.WARN);
 
 // create the subscriber, specifying the name of the subscription topic
-var subscriber = new TopicSubscriber(solace, 'services/blogService');
+var subscriber = new TopicSubscriber(solace, 'service/blog/*/*/new');
 
 // subscribe to messages on Solace PubSub+ Event Broker
 subscriber.run(process.argv);
